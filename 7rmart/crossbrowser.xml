@@ -1,0 +1,20 @@
+<suite name="crossbrowsertesting">
+	<test name="chrometest">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="testscript.Logintest"></class>
+			<methods>
+					<include name="verifyUserLoginWithValidCredential()"></include>
+				</methods>
+		</classes>
+	</test>
+	<test name="EdgeTest" thread-count="5">
+		<parameter name="browser" value="Edge"></parameter>
+		<classes>
+			<class name="testscript.Logintest"></class>
+			<methods>
+					<include name="verifyUserLoginWithValidCredential()"></include>
+				</methods>
+		</classes>
+	</test>
+</suite>

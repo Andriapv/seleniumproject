@@ -1,0 +1,17 @@
+<suite name="myTestSuite">
+
+	<test name="groupTest">
+	<parameter name="browser" value="chrome"></parameter>
+		<groups>
+			<run>
+				<exclude name="smoke"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="testscript.Categorytest"></class>
+
+
+		</classes>
+	</test>
+
+</suite>

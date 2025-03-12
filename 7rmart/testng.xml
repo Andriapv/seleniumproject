@@ -1,0 +1,14 @@
+
+<suite name="mytestsuite">
+<parameter name="browser" value="chrome"></parameter>
+<test name="testng">
+<listeners>
+<listener class-name="listeners.Listener"></listener>
+<listener class-name="listeners.RetryListener"></listener>
+</listeners>
+<classes>
+<class name="testscript.Categorytest">
+</class>
+</classes>
+</test>
+</suite>

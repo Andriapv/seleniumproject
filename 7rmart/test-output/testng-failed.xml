@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [mytestsuite]">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.Listener"/>
+    <listener class-name="listeners.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="testng(failed)">
+    <classes>
+      <class name="testscript.Categorytest">
+        <methods>
+          <include name="verifyUserIsAbleTocreateNewCategory"/>
+          <include name="verifyUserIsAbleTosearchCategory"/>
+          <include name="driverquit"/>
+          <include name="verifyUserIsAbleToupdateTheCategoryField"/>
+          <include name="initializebrowser"/>
+          <include name="verifyUserIsAbleTodeleteTheCategoryField"/>
+        </methods>
+      </class> <!-- testscript.Categorytest -->
+    </classes>
+  </test> <!-- testng(failed) -->
+</suite> <!-- Failed suite [mytestsuite] -->

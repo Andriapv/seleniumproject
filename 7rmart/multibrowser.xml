@@ -1,0 +1,20 @@
+<suite name="multibrowsertest" parallel="tests" thread-count="2">
+	<test name="test1" thread-count="5">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testscript.Logintest"></class>
+			<methods>
+				<include name="verifyUserLoginWithValidCredential()"></include>
+			</methods>
+		</classes>
+	</test>
+	<test name="test2" thread-count="5">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="testscript.Logintest"></class>
+			<methods>
+				<include name="verifyLoginwithInvalidUsernameAndValidpassword()"></include>
+			</methods>
+          </classes>
+	</test>
+</suite>

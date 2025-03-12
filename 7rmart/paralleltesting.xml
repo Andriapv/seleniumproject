@@ -1,0 +1,14 @@
+<suite name="paralleltesting" parallel="tests" thread-count="2">
+	<test name="test1" thread-count="5">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testscript.Logintest"></class>
+		</classes>
+	</test>
+	<test name="test2" thread-count="5">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testscript.Logintest"></class>
+		</classes>
+	</test>
+</suite>
