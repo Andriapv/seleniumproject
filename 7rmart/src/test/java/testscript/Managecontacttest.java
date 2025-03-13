@@ -19,17 +19,14 @@ public class Managecontacttest extends Base {
 	Pageutility pg = new Pageutility();
 	Managecontactpage managecontact;
 
-	 @DataProvider(name = "contactData")
-	    public Object[][] contactData() {
-	        return new Object[][] {
-	            { "1234567890", "test@example.com", "123 Main St", "9 AM", "5 PM" },  // Sample data set
-	            // Add more data sets as required
-	        };
-	    }
+	@DataProvider(name = "contactData")
+	public Object[][] contactData() {
+		return new Object[][] { { "1234567890", "test@example.com", "123 Main St", "9 AM", "5 PM" }};
+	}
 
-	    
 	@Test(dataProvider = "contactData")
-	public void verifyUserIsAbleToupdateTheContactDetailsInManage(String number, String email, String address, String deliveryTime, String deliveryTimeLimit) throws IOException {
+	public void verifyUserIsAbleToupdateTheContactDetailsInManage(String number, String email, String address,
+			String deliveryTime, String deliveryTimeLimit) throws IOException {
 		login = new Loginpage(driver);
 		home = login.loginUsingExceldata();
 		managecontact = home.clickManageContactField().clickContactButton().updatePhoneNumberInPhoneNumberField(number)

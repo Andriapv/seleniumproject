@@ -128,18 +128,7 @@ public class Subcategorypage {
 	}
 
 	public boolean elementsearching() {
-		String subcategory = "beef burger";
-		boolean flag = false;
-		if (tablesearch != null && !tablesearch.isEmpty()) {
-			for (WebElement searching : tablesearch) {
-				if (searching.getText().trim().equalsIgnoreCase(subcategory)) {
-					flag = true;
-					break;
-				}
-			}
-		}
-
-		return flag;
+		return pg.elementSearching(tablesearch, "burger");
 	}
 
 	public Subcategorypage clickUpdateButtonInsubcategoryListTable() {

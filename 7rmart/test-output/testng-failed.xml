@@ -8,16 +8,13 @@
   </listeners>
   <test thread-count="5" name="testng(failed)">
     <classes>
-      <class name="testscript.Categorytest">
+      <class name="testscript.Adminusertest">
         <methods>
-          <include name="verifyUserIsAbleTocreateNewCategory"/>
-          <include name="verifyUserIsAbleTosearchCategory"/>
           <include name="driverquit"/>
-          <include name="verifyUserIsAbleToupdateTheCategoryField"/>
+          <include name="verifyUserIsAbleTosearchAdminUser"/>
           <include name="initializebrowser"/>
-          <include name="verifyUserIsAbleTodeleteTheCategoryField"/>
         </methods>
-      </class> <!-- testscript.Categorytest -->
+      </class> <!-- testscript.Adminusertest -->
     </classes>
   </test> <!-- testng(failed) -->
 </suite> <!-- Failed suite [mytestsuite] -->

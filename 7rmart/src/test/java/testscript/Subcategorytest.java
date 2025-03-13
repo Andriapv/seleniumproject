@@ -4,7 +4,6 @@ import java.awt.AWTException;
 import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import automationcore.Base;
 import constants.Constants;
 import pages.Homepage;
@@ -49,8 +48,8 @@ public class Subcategorytest extends Base {
 		String subcategorynameinupdate = "cheesy Beef burger";
 		subcategory = home.clickSubCategoryField().clickUpdateButtonInsubcategoryListTable()
 				.selectCategoryfromCategoryListInCategoryField()
-				.enterSubCategoryInSubCategoryFieldinUpdate(subcategorynameinupdate).
-				changeImageinChooseFileinUpdate().clickUpdateButton();
+				.enterSubCategoryInSubCategoryFieldinUpdate(subcategorynameinupdate).changeImageinChooseFileinUpdate()
+				.clickUpdateButton();
 		boolean updatedalertmessage = subcategory.successfulupdateAlertMessage();
 		Assert.assertTrue(updatedalertmessage, Constants.SC_UPDATETHESUBCATEGORY);
 	}

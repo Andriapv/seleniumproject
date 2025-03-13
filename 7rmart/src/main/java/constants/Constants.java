@@ -23,5 +23,6 @@ public class Constants {
 	public static final String IMAGEUPLOAD=System.getProperty("user.dir")+"\\src\\test\\resources\\images\\burger.jfif";
 	public static final String CONFIGFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\Config.properties";
 	public static final String SC_FILEPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\images\\beefburger.jfif";
-	public static final String C_FILEPATH=System.getProperty("user.dir")+"src\\test\\resources\\images\\BidriKaiserSlingBag_1.jpg";
+	public static final String C_FILEPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\images\\BidriKaiserSlingBag_1.jpg";
 }
+	
