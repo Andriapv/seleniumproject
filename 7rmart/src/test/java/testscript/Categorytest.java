@@ -1,10 +1,8 @@
 package testscript;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import automationcore.Base;
 import constants.Constants;
 import pages.Categorypage;

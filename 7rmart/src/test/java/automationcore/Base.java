@@ -23,7 +23,7 @@ public class Base {
 	Properties prop;
 	FileInputStream file;
 	public WebDriver driver;
-@BeforeMethod
+@BeforeMethod(alwaysRun=true)
 @Parameters("browser")
   public void initializebrowser(String browser) throws Exception {
 	prop=new Properties();
@@ -52,7 +52,7 @@ public class Base {
 	driver.manage().window().maximize();
 	wait.implicitlyWait(driver);
   }
-@AfterMethod
+@AfterMethod(alwaysRun=true)
 public void driverquit(ITestResult itestresult ) throws IOException
 {
 	

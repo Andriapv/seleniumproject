@@ -89,15 +89,13 @@ public class Pageutility {
 		   {
 			   driver.switchTo().alert().accept();
 		   }
-		   public boolean elementSearching(List<WebElement> elements, String categorysearch) {
+		   public boolean elementSearching(List<WebElement> elements, String search) {
 			    boolean flag = false;
 			    
-			    // Check if the list is not null or empty
+			    
 			    if (elements != null && !elements.isEmpty()) {
-			        // Loop through each WebElement in the list
-			        for (WebElement searching : elements) {
-			            // Compare the text of each element
-			            if (searching.getText().trim().equalsIgnoreCase(categorysearch)) {
+			         for (WebElement searching : elements) {
+			            if (searching.getText().trim().equalsIgnoreCase(search)) {
 			                flag = true;
 			                break;
 			            }

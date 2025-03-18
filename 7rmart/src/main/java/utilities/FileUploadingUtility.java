@@ -7,7 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import org.openqa.selenium.WebElement;
 
-import selenium.Fileupload;
+
 
 public class FileUploadingUtility {
 	
@@ -37,12 +37,5 @@ public class FileUploadingUtility {
 		
 	}
 
-	public static void main(String[] args) throws AWTException {
-		
-		Fileupload fileupload=new Fileupload();
-		fileupload.initializeBrowser();
-		fileupload.fileuploadusingsendkeys();
-		fileupload.fileuploadusingrobotkey();
-	}
-
+	
 }
