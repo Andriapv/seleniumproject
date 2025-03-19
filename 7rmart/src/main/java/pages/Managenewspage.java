@@ -76,7 +76,7 @@ public class Managenewspage {
 	}
 
 	public boolean iselementpresentintable() {
-		return pg.elementSearching(tablesearch, "hello");
+		return pg.elementSearching(tablesearch, "New Offer Alert !!!");
 	}
 
 	public Managenewspage clickDeleteButton() {

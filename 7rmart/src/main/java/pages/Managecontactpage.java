@@ -5,11 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.Fakerutility;
 import utilities.Pageutility;
 import utilities.Waitutility;
 
 public class Managecontactpage {
 	public WebDriver driver;
+	 Fakerutility faker=new  Fakerutility();
 	Pageutility pg = new Pageutility();
 	Waitutility wait = new Waitutility();
 
@@ -45,6 +47,7 @@ public class Managecontactpage {
 	public Managecontactpage updatePhoneNumberInPhoneNumberField(String number) {
 		phonenumberfield.clear();
 		phonenumberfield.sendKeys(number);
+		
 		return this;
 	}
 

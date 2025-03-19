@@ -1,4 +1,6 @@
 package utilities;
+import java.util.Date;
+
 import com.github.javafaker.Faker;
 
 public class Fakerutility {
@@ -42,6 +44,11 @@ public class Fakerutility {
 	public long generaterandomDigit()
 	{
 		return faker.number().randomDigit();
+		
+	}
+	public Date generatedate()
+	{
+		return faker.date().birthday();
 		
 	}
 	

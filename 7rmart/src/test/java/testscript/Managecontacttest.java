@@ -1,16 +1,14 @@
 package testscript;
 
 import java.io.IOException;
-
+import java.util.Date;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import automationcore.Base;
-import constants.Constants;
 import pages.Homepage;
 import pages.Loginpage;
 import pages.Managecontactpage;
+import utilities.Fakerutility;
 import utilities.Pageutility;
 
 public class Managecontacttest extends Base {
@@ -18,22 +16,25 @@ public class Managecontacttest extends Base {
 	Homepage home;
 	Pageutility pg = new Pageutility();
 	Managecontactpage managecontact;
+	Fakerutility fakerUtility = new Fakerutility();
 
-	@DataProvider(name = "contactData")
-	public Object[][] contactData() {
-		return new Object[][] { { "1234567890", "test@example.com", "123 Main St", "9 AM", "5 PM" }};
-	}
+	@Test
+	public void verifyUserIsAbleToUpdateTheContactDetailsInManage() throws IOException {
 
-	@Test(dataProvider = "contactData")
-	public void verifyUserIsAbleToupdateTheContactDetailsInManage(String number, String email, String address,
-			String deliveryTime, String deliveryTimeLimit) throws IOException {
+		String fakePhoneNumber = fakerUtility.generatePhoneNumber();
+		String fakeEmail = fakerUtility.generateemail();
+		String fakeAddress = fakerUtility.generateAddress();
+		Date fakeDate = fakerUtility.generatedate();
+		long randomNumber = fakerUtility.generaterandomNumber();
+
 		login = new Loginpage(driver);
 		home = login.loginUsingExceldata();
-		managecontact = home.clickManageContactField().clickContactButton().updatePhoneNumberInPhoneNumberField(number)
-				.updateEmailIdInEmailId(email).updateAddressInAddress(address)
-				.updateDeliveryTimeInDeliveryTime(deliveryTime)
-				.updateDeliveryTimeLimitInDeliveryTimelimit(deliveryTimeLimit).submitButtonInUpdateContact();
+		managecontact = home.clickManageContactField().clickContactButton()
+				.updatePhoneNumberInPhoneNumberField(fakePhoneNumber).updateEmailIdInEmailId(fakeEmail)
+				.updateAddressInAddress(fakeAddress).updateDeliveryTimeInDeliveryTime(fakeDate.toString())
+				.updateDeliveryTimeLimitInDeliveryTimelimit(String.valueOf(randomNumber)).submitButtonInUpdateContact();
+
 		boolean alert = managecontact.isalertpresent();
-		Assert.assertTrue(alert, Constants.MC_MANAGECONTACT);
+		Assert.assertTrue(alert, "Alert not displayed after updating contact details");
 	}
 }

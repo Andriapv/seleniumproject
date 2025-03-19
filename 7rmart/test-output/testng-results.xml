@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-13T07:38:10 IST" name="mytestsuite" finished-at="2025-03-13T07:39:08 IST" duration-ms="58150">
+  <suite started-at="2025-03-18T21:05:18 IST" name="mytestsuite" finished-at="2025-03-18T21:05:31 IST" duration-ms="13425">
     <groups>
     </groups>
-    <test started-at="2025-03-13T07:38:10 IST" name="testng" finished-at="2025-03-13T07:39:08 IST" duration-ms="58150">
-      <class name="testscript.Adminusertest">
-        <test-method is-config="true" signature="initializebrowser(java.lang.String)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:10 IST" name="initializebrowser" finished-at="2025-03-13T07:38:18 IST" duration-ms="8691" status="PASS">
+    <test started-at="2025-03-18T21:05:18 IST" name="testng" finished-at="2025-03-18T21:05:31 IST" duration-ms="13425">
+      <class name="testscript.Managecontacttest">
+        <test-method is-config="true" signature="initializebrowser(java.lang.String)[pri:0, instance:testscript.Managecontacttest@2bec854f]" started-at="2025-03-18T21:05:18 IST" name="initializebrowser" finished-at="2025-03-18T21:05:26 IST" duration-ms="7772" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,100 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializebrowser -->
-        <test-method signature="verifyUserIsAbleToDeleteTheAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:18 IST" name="verifyUserIsAbleToDeleteTheAdminUser" finished-at="2025-03-13T07:38:22 IST" duration-ms="3981" status="PASS">
+        <test-method signature="verifyUserIsAbleToUpdateTheContactDetailsInManage()[pri:0, instance:testscript.Managecontacttest@2bec854f]" started-at="2025-03-18T21:05:26 IST" name="verifyUserIsAbleToUpdateTheContactDetailsInManage" finished-at="2025-03-18T21:05:31 IST" duration-ms="5196" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToDeleteTheAdminUser -->
-        <test-method is-config="true" signature="driverquit(org.testng.ITestResult)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:22 IST" name="driverquit" finished-at="2025-03-13T07:38:23 IST" duration-ms="494" status="PASS">
+        </test-method> <!-- verifyUserIsAbleToUpdateTheContactDetailsInManage -->
+        <test-method is-config="true" signature="driverquit(org.testng.ITestResult)[pri:0, instance:testscript.Managecontacttest@2bec854f]" started-at="2025-03-18T21:05:31 IST" name="driverquit" finished-at="2025-03-18T21:05:31 IST" duration-ms="389" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToDeleteTheAdminUser status=SUCCESS method=Adminusertest.verifyUserIsAbleToDeleteTheAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserIsAbleToUpdateTheContactDetailsInManage status=SUCCESS method=Managecontacttest.verifyUserIsAbleToUpdateTheContactDetailsInManage()[pri:0, instance:testscript.Managecontacttest@2bec854f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverquit -->
-        <test-method is-config="true" signature="initializebrowser(java.lang.String)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:23 IST" name="initializebrowser" finished-at="2025-03-13T07:38:31 IST" duration-ms="8312" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializebrowser -->
-        <test-method signature="verifyUserIsAbleToUpdateTheAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:31 IST" name="verifyUserIsAbleToUpdateTheAdminUser" finished-at="2025-03-13T07:38:35 IST" duration-ms="4013" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToUpdateTheAdminUser -->
-        <test-method is-config="true" signature="driverquit(org.testng.ITestResult)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:35 IST" name="driverquit" finished-at="2025-03-13T07:38:36 IST" duration-ms="530" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToUpdateTheAdminUser status=SUCCESS method=Adminusertest.verifyUserIsAbleToUpdateTheAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverquit -->
-        <test-method is-config="true" signature="initializebrowser(java.lang.String)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:36 IST" name="initializebrowser" finished-at="2025-03-13T07:38:43 IST" duration-ms="7450" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializebrowser -->
-        <test-method signature="verifyUserIsAbleTocreateNewAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:43 IST" name="verifyUserIsAbleTocreateNewAdminUser" finished-at="2025-03-13T07:38:48 IST" duration-ms="4669" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbleTocreateNewAdminUser -->
-        <test-method is-config="true" signature="driverquit(org.testng.ITestResult)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:48 IST" name="driverquit" finished-at="2025-03-13T07:38:48 IST" duration-ms="383" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleTocreateNewAdminUser status=SUCCESS method=Adminusertest.verifyUserIsAbleTocreateNewAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverquit -->
-        <test-method is-config="true" signature="initializebrowser(java.lang.String)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:48 IST" name="initializebrowser" finished-at="2025-03-13T07:38:54 IST" duration-ms="5933" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializebrowser -->
-        <test-method signature="verifyUserIsAbleTosearchAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:38:54 IST" name="verifyUserIsAbleTosearchAdminUser" finished-at="2025-03-13T07:39:07 IST" duration-ms="12342" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbleTosearchAdminUser -->
-        <test-method is-config="true" signature="driverquit(org.testng.ITestResult)[pri:0, instance:testscript.Adminusertest@7283d3eb]" started-at="2025-03-13T07:39:07 IST" name="driverquit" finished-at="2025-03-13T07:39:08 IST" duration-ms="1236" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleTosearchAdminUser status=SUCCESS method=Adminusertest.verifyUserIsAbleTosearchAdminUser()[pri:0, instance:testscript.Adminusertest@7283d3eb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverquit -->
-      </class> <!-- testscript.Adminusertest -->
+      </class> <!-- testscript.Managecontacttest -->
     </test> <!-- testng -->
   </suite> <!-- mytestsuite -->
 </testng-results>
