@@ -2,6 +2,7 @@ package testscript;
 
 import java.io.IOException;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import automationcore.Base;
 import constants.Constants;
@@ -27,11 +28,12 @@ public class Managenewstest extends Base {
 
 	}
 
-	@Test
-	public void verifyUserIsAbleToSearchNewsUsingSearchButton() throws IOException {
+	@Test(dataProvider = "searchData")
+	public void verifyUserIsAbleToSearchNewsUsingSearchButton(String searchelement) throws IOException {
 		login = new Loginpage(driver);
 		home = login.loginUsingExceldata();
-		Managenews = home.clickManageNewsButton().clicksearchButtoninManageNews().searcNewsinSearchField("hello")
+
+		Managenews = home.clickManageNewsButton().clicksearchButtoninManageNews().searcNewsinSearchField(searchelement)
 				.clickSubmitButtoninSearch();
 		boolean search = Managenews.iselementpresentintable();
 		Assert.assertTrue(search, Constants.MN_MANAGENEWSSEARCH);
@@ -45,6 +47,11 @@ public class Managenewstest extends Base {
 		Managenews = home.clickManageNewsButton().clickDeleteButton();
 		boolean alert = Managenews.alertMessageInDelete();
 		Assert.assertTrue(alert, Constants.MN_MANAGENEWSDELETE);
+	}
+
+	@DataProvider(name = "searchData")
+	public Object[][] searchDataProvider() {
+		return new Object[][] { { "Manage news in admin users" } };
 	}
 
 }

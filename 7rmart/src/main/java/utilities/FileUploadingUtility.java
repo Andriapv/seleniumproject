@@ -7,24 +7,20 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import org.openqa.selenium.WebElement;
 
-
-
 public class FileUploadingUtility {
-	
-	public void fileuploadusingsendkeys(WebElement element,String filepath)//we can use both method send key.robot
+
+	public void fileuploadusingsendkeys(WebElement element, String filepath)// we can use both method send key.robot
 	{
-		
+
 		element.sendKeys(filepath);
-	
+
 	}
-	public void fileuploadusingrobotkey(WebElement element,String filepath) throws AWTException
-	{
-		
-		
+
+	public void fileuploadusingrobotkey(WebElement element, String filepath) throws AWTException {
 		element.click();
-		StringSelection ss=new StringSelection(filepath);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
-		Robot robot=new Robot();
+		StringSelection ss = new StringSelection(filepath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+		Robot robot = new Robot();
 		robot.delay(500);
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
@@ -34,8 +30,7 @@ public class FileUploadingUtility {
 		robot.delay(500);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
-		
+
 	}
 
-	
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import automationcore.Base;
+import constants.Constants;
 import pages.Homepage;
 import pages.Loginpage;
 import pages.Managecontactpage;
@@ -35,6 +36,6 @@ public class Managecontacttest extends Base {
 				.updateDeliveryTimeLimitInDeliveryTimelimit(String.valueOf(randomNumber)).submitButtonInUpdateContact();
 
 		boolean alert = managecontact.isalertpresent();
-		Assert.assertTrue(alert, "Alert not displayed after updating contact details");
+		Assert.assertTrue(alert, Constants.MC_MANAGECONTACT);
 	}
 }

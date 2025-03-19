@@ -1,56 +1,55 @@
 package utilities;
+
 import java.util.Date;
 
 import com.github.javafaker.Faker;
 
 public class Fakerutility {
-	Faker faker=new Faker();
-	public String generateFirstName()
-	{
+	Faker faker = new Faker();
+
+	public String generateFirstName() {
 		return faker.name().firstName();
-		
+
 	}
-	public String generateLastName()
-	{
+
+	public String generateLastName() {
 		return faker.name().lastName();
-		
+
 	}
-	public String generateAddress()
-	{
+
+	public String generateAddress() {
 		return faker.address().fullAddress();
-		
-		
+
 	}
-	public String generatePhoneNumber()
-	{
+
+	public String generatePhoneNumber() {
 		return faker.phoneNumber().toString();
-		
+
 	}
-	public long generaterandomNumber()
-	{
+
+	public long generaterandomNumber() {
 		return faker.number().randomNumber();
-		
+
 	}
-	public String generateJob()
-	{
+
+	public String generateJob() {
 		return faker.job().field();
-		
+
 	}
-	public String generateemail()
-	{
+
+	public String generateemail() {
 		return faker.internet().emailAddress();
-		
+
 	}
-	public long generaterandomDigit()
-	{
+
+	public long generaterandomDigit() {
 		return faker.number().randomDigit();
-		
+
 	}
-	public Date generatedate()
-	{
+
+	public Date generatedate() {
 		return faker.date().birthday();
-		
+
 	}
-	
 
 }

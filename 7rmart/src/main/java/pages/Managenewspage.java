@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import utilities.Pageutility;
 import utilities.Waitutility;
 
@@ -76,13 +75,14 @@ public class Managenewspage {
 	}
 
 	public boolean iselementpresentintable() {
-		return pg.elementSearching(tablesearch, "New Offer Alert !!!");
+		return pg.elementSearching(tablesearch, "Manage news in admin users");
 	}
 
 	public Managenewspage clickDeleteButton() {
-		pg.javascriptclick(deletebutton, driver);
-		pg.acceptalert(driver);
-		return this;
+	    pg.javascriptclick(deletebutton, driver);  
+	   wait.waitForAlert(driver);
+	   pg.acceptalert(driver);
+	    return this;
 	}
 
 	public boolean alertMessageInDelete() {

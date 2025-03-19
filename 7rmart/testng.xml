@@ -1,15 +1,18 @@
 
 <suite name="mytestsuite">
-<parameter name="browser" value="chrome"></parameter>
-<test name="testng">
-<listeners>
-<listener class-name="listeners.Listener"></listener>
-<listener class-name="listeners.RetryListener"></listener>
-</listeners>
-<classes>
-
-<class name="testscript.Managecontacttest"></class>
-
-</classes>
-</test>
+	<parameter name="browser" value="chrome"></parameter>
+	<test name="testng">
+		<listeners>
+			<listener class-name="listeners.Listener"></listener>
+			<listener class-name="listeners.RetryListener"></listener>
+		</listeners>
+		<classes>
+			<class name="testscript.Adminusertest"></class>
+			<class name="testscript.Categorytest"></class>
+			<class name="testscript.Logintest"></class>
+			<class name="testscript.Managecontacttest"></class>
+			<class name="testscript.Subcategorytest"></class>
+			<class name="testscript.Managenewstest"></class>
+		</classes>
+	</test>
 </suite>

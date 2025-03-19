@@ -11,7 +11,7 @@ import utilities.Waitutility;
 
 public class Managecontactpage {
 	public WebDriver driver;
-	 Fakerutility faker=new  Fakerutility();
+	Fakerutility faker = new Fakerutility();
 	Pageutility pg = new Pageutility();
 	Waitutility wait = new Waitutility();
 
@@ -47,7 +47,7 @@ public class Managecontactpage {
 	public Managecontactpage updatePhoneNumberInPhoneNumberField(String number) {
 		phonenumberfield.clear();
 		phonenumberfield.sendKeys(number);
-		
+
 		return this;
 	}
 

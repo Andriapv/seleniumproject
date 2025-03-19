@@ -159,7 +159,6 @@ public class Subcategorypage {
 	public Subcategorypage clickUpdateButton() {
 		pg.javascriptclick(updatesubmitbutton, driver);
 		return this;
-
 	}
 
 	public Subcategorypage clickDeleteButton() {
@@ -170,7 +169,6 @@ public class Subcategorypage {
 
 	public boolean successfullDeteletedMessageAlert() {
 		return successfulldeletealert.isDisplayed();
-
 	}
 
 	public boolean successfulupdateAlertMessage() {

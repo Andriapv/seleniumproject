@@ -1,24 +1,28 @@
 
 package retry;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-public class Retry  implements IRetryAnalyzer {
-	private static final Logger LOG = LogManager.getLogger("Retry.class");//initialize logger 
-	private static final int maxTry = 2;  //max noof tetry attempt
-	private int count = 0; //homany times the retry have been atrempted              
-	public boolean retry(final ITestResult iTestResult)//interface
+
+public class Retry implements IRetryAnalyzer {
+	private static final Logger LOG = LogManager.getLogger("Retry.class");// initialize logger
+	private static final int maxTry = 2; // max noof tetry attempt
+	private int count = 0; // homany times the retry have been atrempted
+
+	public boolean retry(final ITestResult iTestResult)// interface
 	{
-		if (!iTestResult.isSuccess()) {     
-			if (this.count < maxTry) {       
+		if (!iTestResult.isSuccess()) {
+			if (this.count < maxTry) {
 				LOG.info("Retrying test " + iTestResult.getName() + " with status "
 						+ getResultStatusName(iTestResult.getStatus()) + " for the " + (this.count + 1) + " time(s).");
 				this.count++;
-				return true; 
+				return true;
 			}
 		}
-		return false;  	}
+		return false;
+	}
 
 	public String getResultStatusName(final int status) {
 		String resultName = null;
@@ -32,5 +36,5 @@ public class Retry  implements IRetryAnalyzer {
 			resultName = "SKIP";
 		}
 		return resultName;
-}
+	}
 }
