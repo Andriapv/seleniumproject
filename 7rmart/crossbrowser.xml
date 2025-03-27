@@ -4,7 +4,7 @@
 		<classes>
 			<class name="testscript.Logintest"></class>
 			<methods>
-					<include name="verifyUserLoginWithValidCredential()"></include>
+					<include name="verifyUserLoginWithValidCredential"></include>
 				</methods>
 		</classes>
 	</test>
@@ -13,7 +13,7 @@
 		<classes>
 			<class name="testscript.Logintest"></class>
 			<methods>
-					<include name="verifyUserLoginWithValidCredential()"></include>
+					<include name="verifyUserLoginWithValidCredential"></include>
 				</methods>
 		</classes>
 	</test>

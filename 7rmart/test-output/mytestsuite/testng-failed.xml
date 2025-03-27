@@ -8,13 +8,15 @@
   </listeners>
   <test thread-count="5" name="testng(failed)">
     <classes>
-      <class name="testscript.Managenewstest">
+      <class name="testscript.Adminusertest">
         <methods>
-          <include name="verifyUserIsAbleToSearchNewsUsingSearchButton" invocation-numbers="0"/>
+          <include name="verifyUserIsAbleToUpdateTheAdminUser"/>
+          <include name="verifyUserIsAbleToDeleteTheAdminUser"/>
           <include name="driverquit"/>
+          <include name="verifyUserIsAbleTosearchAdminUser"/>
           <include name="initializebrowser"/>
         </methods>
-      </class> <!-- testscript.Managenewstest -->
+      </class> <!-- testscript.Adminusertest -->
     </classes>
   </test> <!-- testng(failed) -->
 </suite> <!-- Failed suite [mytestsuite] -->

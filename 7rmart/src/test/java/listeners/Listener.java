@@ -64,7 +64,7 @@ public class Listener extends Base implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		ITestListener.super.onTestSkipped(result);
 		extentTest.get().log(Status.SKIP, "Test Skipped");
-		// String testMethodName = result.getMethod().getMethodName();
+		
 	}
 
 	public void onTestFailedWithTimeout(ITestResult result) {
@@ -77,6 +77,6 @@ public class Listener extends Base implements ITestListener {
 
 	public void onFinish(ITestContext context) {
 		ITestListener.super.onFinish(context);
-		extent.flush();// save and rights all the collected logs and test details into the final report
+		extent.flush();
 	}
 }

@@ -1,4 +1,3 @@
-
 package retry;
 
 import org.apache.logging.log4j.LogManager;
@@ -7,11 +6,11 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer {
-	private static final Logger LOG = LogManager.getLogger("Retry.class");// initialize logger
-	private static final int maxTry = 2; // max noof tetry attempt
-	private int count = 0; // homany times the retry have been atrempted
+	private static final Logger LOG = LogManager.getLogger("Retry.class");
+	private static final int maxTry = 2; 
+	private int count = 0; 
 
-	public boolean retry(final ITestResult iTestResult)// interface
+	public boolean retry(final ITestResult iTestResult)
 	{
 		if (!iTestResult.isSuccess()) {
 			if (this.count < maxTry) {

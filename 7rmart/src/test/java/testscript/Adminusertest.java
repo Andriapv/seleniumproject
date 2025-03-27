@@ -29,41 +29,29 @@ public class Adminusertest extends Base {
 
 	@Test
 	public void verifyUserIsAbleTosearchAdminUser() throws IOException {
-		Loginpage lp = new Loginpage(driver);
-		lp.loginUsingExceldata();
-		Homepage home = new Homepage(driver);
-		home.clickAdminUserButton();
-		Adminuserpage adminuser = new Adminuserpage(driver);
-		adminuser.clicksearchButton();
-		adminuser.enterUserNameInUserNameFieldSearch("arya2");
-		adminuser.selectUserTypeInUserTypeFieldInSearch();
-		adminuser.clicksubmitsearchButton();
+		login = new Loginpage(driver);
+		home = login.loginUsingExceldata();
+		adminuser = home.clickAdminUserButton().clicksearchButton().enterUserNameInUserNameFieldSearch("arya2")
+				.selectUserTypeInUserTypeFieldInSearch().clicksubmitsearchButton();
 		boolean tablesearch = adminuser.elementSearchinTable();
 		Assert.assertTrue(tablesearch, Constants.ADM_ADMINUSERSSEARCH);
 	}
 
 	@Test
 	public void verifyUserIsAbleToUpdateTheAdminUser() throws IOException {
-		Loginpage lp = new Loginpage(driver);
-		lp.loginUsingExceldata();
-		Homepage home = new Homepage(driver);
-		home.clickAdminUserButton();
-		Adminuserpage adminuser = new Adminuserpage(driver);
-		adminuser.clickupdateButton();
-		adminuser.enterUserNameInUserNameFieldUpdate("Ann");
-		adminuser.clicksubmitButtonUpdate();
+		login = new Loginpage(driver);
+		home = login.loginUsingExceldata();
+		adminuser = home.clickAdminUserButton().clickupdateButton().enterUserNameInUserNameFieldUpdate("Ann")
+				.clicksubmitButtonUpdate();
 		boolean isalertisdisplayed = adminuser.successfullAlertMessageupdate();
 		Assert.assertTrue(isalertisdisplayed, Constants.ADM_ADMINUSERSUPDATE);
 	}
 
 	@Test
 	public void verifyUserIsAbleToDeleteTheAdminUser() throws IOException {
-		Loginpage lp = new Loginpage(driver);
-		lp.loginUsingExceldata();
-		Homepage home = new Homepage(driver);
-		home.clickAdminUserButton();
-		Adminuserpage adminuser = new Adminuserpage(driver);
-		adminuser.clickDeleteButton();
+		login = new Loginpage(driver);
+		home = login.loginUsingExceldata();
+		adminuser = home.clickAdminUserButton().clickDeleteButton();
 		boolean isalertdisplayed = adminuser.successfullAlertMessageInDelete();
 		Assert.assertTrue(isalertdisplayed, Constants.ADM_ADMINUSERSDELETE);
 	}

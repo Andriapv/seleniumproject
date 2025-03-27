@@ -3,24 +3,20 @@ package automationcore;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
 import constants.Constants;
 import utilities.Screenshotutility;
 import utilities.Waitutility;
 
 public class Base {
 	Waitutility wait = new Waitutility();
-
 	Properties prop;
 	FileInputStream file;
 	public WebDriver driver;

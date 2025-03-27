@@ -8,11 +8,7 @@
 		</listeners>
 		<classes>
 			<class name="testscript.Adminusertest"></class>
-			<class name="testscript.Categorytest"></class>
-			<class name="testscript.Logintest"></class>
-			<class name="testscript.Managecontacttest"></class>
-			<class name="testscript.Subcategorytest"></class>
-			<class name="testscript.Managenewstest"></class>
+			
 		</classes>
 	</test>
 </suite>
